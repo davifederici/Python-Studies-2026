@@ -1,23 +1,36 @@
-cont = 0
+"""
+    Autor = Davi Federici Mendes Soares
+    Exercicios = Escreva um programa que leia 50 valores e encontre o maior e o menor deles. Mostre o resultado.
+    Disciplina = Estrutura de repetição
+    """
 
-valor = int(input("Digite um valor: "))
+#Definir a variável para os 50 valores
+a = 50
 
-maior = valor
-menor = valor
-
+#Variável de valor incial
+b = int(input("Digite um valor:"))
+#Contador
 cont = 1
 
-while cont < 50:
+#Menor valor
+menor = b
 
-    valor = int(input("Digite um valor: "))
+#Maior valor 
+maior = b
 
-    if valor > maior:
-        maior = valor
+#Estrutura de Repetição
+while a > cont:
+    if b > maior:
+        maior = b
+    
+    elif b < menor:    
+        menor = b
+    
+    b = int(input("Digite um valor:"))
 
-    if valor < menor:
-        menor = valor
+#Finalizar a repetição
+    cont += 1
 
-    cont = cont + 1
-
+#Exibir valores
 print("O maior valor é:", maior)
 print("O menor valor é:", menor)

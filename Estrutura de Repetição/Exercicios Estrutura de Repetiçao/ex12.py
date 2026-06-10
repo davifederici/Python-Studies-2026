@@ -1,33 +1,55 @@
-soma_salario = 0
-soma_filhos = 0
+""""
+    Autor = Davi Federici Mendes Soares
+    Exercicios = A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos. A prefeitura deseja saber:
+a. Média do salário da população.
+b. Média do número de filhos.
+c. Maior salário.
+d. Percentual de pessoas com salário até R$100,00.
+O final da leitura de dados se dará com a entrada de um salário negativo.
+    Disciplina = Estrutura de repetição
+    """
+
+#Variável para salário
+n = float(input("Digite seu sálario:"))
+
+#Contador
 cont = 0
-maior_salario = 0
-salario_100 = 0
 
-salario = float(input("Digite o salário: "))
+#Soma
+soma = 0
+soma2 = 0
 
-while salario >= 0:
+#Maior Salário
+maior = 0
 
-    filhos = int(input("Digite o número de filhos: "))
+#Percentual
+ate100 = 0
 
-    soma_salario = soma_salario + salario
-    soma_filhos = soma_filhos + filhos
+#Estrutura de repetição
+while n > 0:
+#Variável para filhos
+    f = int(input("Digite o número de filhos:"))
 
-    cont = cont + 1
+    soma += n
+    soma += f
+    cont += 1
 
-    if salario > maior_salario:
-        maior_salario = salario
+    if n > maior:
+        maior = n
 
-    if salario <= 100:
-        salario_100 = salario_100 + 1
+    if n <= 100:
+        ate100 += 1
 
-    salario = float(input("Digite o salário: "))
+    n = float(input("Digite seu salário:"))
 
-media_salario = soma_salario / cont
-media_filhos = soma_filhos / cont
-percentual = (salario_100 * 100) / cont
+    if cont > 0:
+        media = soma / cont
+        mediaf = soma2 / cont
+        percentual = (ate100/cont) * 100
 
-print("Média do salário:", media_salario)
-print("Média de filhos:", media_filhos)
-print("Maior salário:", maior_salario)
-print("Percentual com salário até R$100,00:", percentual, "%")
+        print("Média salárial:", media)
+        print("Média de filhos:", mediaf)
+        print("O maior salário é:", maior)
+        print("O percentual foi de:", percentual,"%")
+    else:
+        print("Nenhum dado informado")

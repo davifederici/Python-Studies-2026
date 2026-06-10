@@ -1,27 +1,40 @@
-soma_antigo = 0
-soma_novo = 0
+""""
+    Autor = Davi Federici Mendes Soares
+    Exercicios = Uma empresa deseja aumentar seus preços em 20%. Faça um programa que leia o código e o preço de custo de produtos. Ao final da leitura, o programa deve exibir uma lista relacionando o código do produto ao seu novo preço, e finalmente o programa deve informar a média dos preços com e sem aumento. A entrada de dados deve terminar quando for lido um código de produto negativo.ura de repetição
+    """
+
+#Variável código
+prod = int(input("Digite o código do produto:"))
+
+#Contador
 cont = 0
+cont2 = 0
 
-codigo = int(input("Digite o código do produto: "))
+#Soma
+soma = 0
+soma2 = 0
 
-while codigo >= 0:
+preco1 = 0
 
-    preco = float(input("Digite o preço do produto: "))
+while prod >= 0:
 
-    novo_preco = preco * 1.20
+    preco = float(input("Digite o preço de custo do produto:"))
 
-    print("Código do produto:", codigo)
-    print("Novo preço: R$", novo_preco)
+    preco1 = preco * 1.20
 
-    soma_antigo = soma_antigo + preco
-    soma_novo = soma_novo + novo_preco
+    print("--------------------")
+    print("Código:", prod)
+    print("O valor com aumento de 20 por cento foi de:R$ ", preco1)
+    print("--------------------")
 
-    cont = cont + 1
+    soma += preco
+    soma2 += preco1
+    cont += 1
+    prod = int(input("Digite o código do produto:"))
 
-    codigo = int(input("Digite o código do produto: "))
+    if cont > 0:
+        media = soma / cont
+        media1 = soma2 / cont
 
-media_antigo = soma_antigo / cont
-media_novo = soma_novo / cont
-
-print("Média dos preços sem aumento:", media_antigo)
-print("Média dos preços com aumento:", media_novo)
+        print("Média dos preços sem aumento:R$ ", media)
+        print("Média dos preços com aumento:R$ ", media1)

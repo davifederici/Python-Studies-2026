@@ -1,22 +1,19 @@
-a = int(input("Digite um número: "))
-b = int(input("Digite um número: "))
+#validar as variáveis A e B
+a = int(input("Digite um valor:"))
+b = int(input("Digite um valor:"))
 
-while a <= b:
+#contador para fechar o while
+cont = a
 
-    print("Valor de A:", a)
-    print("Valor de B:", b)
+#estrutura de repetição para rodar o programa
+while cont <= b:
+    print(f"Os valoressão:", cont)
 
-    if a % 2 == 1:
-        print("A é ímpar:", a)
+#Validando valores ímpares e multiplos de 3 na variável A
+    if cont % 2 == 1:
+        print("Os números ímpares de A são:", cont)
+        if cont % 3 == 0:
+            print("Os números ímpares e multiplos de 3 em A são:", cont)
 
-    if a % 3 == 0:
-        print("A é múltiplo de 3:", a)
-
-    if b % 2 == 1:
-        print("B é ímpar:", b)
-
-    if b % 3 == 0:
-        print("B é múltiplo de 3:", b)
-
-    a = int(input("Digite um número: "))
-    b = int(input("Digite um número: "))
+#código para fechar a estrutura de repetição
+    cont = cont + 1

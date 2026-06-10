@@ -1,9 +1,29 @@
-n = int(input("Digite um número:"))
+"""
+    Autor = Davi Federici Mendes Soares
+    Exercicios = Escreva um programa que dado um número inteiro calcule (fatorial).
+    Disciplina = Estrutura de repetição
+    """
 
-fatorial = 1
+#Variável incial
+n = int(input("Digite o valor:"))
+
+#Fatorial
+fat = 1
+
+#Contador
 cont = 1
 
+#Estrutura de Repetição
 while n >= cont:
-    fatorial *= cont
-    cont = cont + 1
-    print("O valor é:", fatorial)
+
+#Exibir n!
+    print(f"{cont}!")
+
+#Cálculo fatorial
+    fat *= cont
+
+#Finalizar a repetição
+    cont += 1
+
+#Exibir resultado
+print("Resultado:", fat)

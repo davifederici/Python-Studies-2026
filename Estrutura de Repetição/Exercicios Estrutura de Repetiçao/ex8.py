@@ -1,24 +1,28 @@
-n = int(input("Digite a quantidade de números: "))
+"""
+Autor = Davi Federici Mendes Soares
+Exercício = Faça um programa que imprima a média de números excluindo o menor e o maior deles.
+Disciplina = Estrutura de repetição
+"""
+
+n = int(input("Quantos números serão digitados? "))
 
 if n <= 2:
-    print("Erro! É necessário digitar mais de 2 números.")
-
+    print("Erro! É necessário informar mais de 2 números.")
 else:
 
-    cont = 0
-    soma = 0
-
-    valor = int(input("Digite um valor: "))
+    valor = float(input("Digite um número: "))
 
     maior = valor
     menor = valor
+    soma = valor
+
+    cont = 1
 
     while cont < n:
 
-        if cont > 0:
-            valor = int(input("Digite um valor: "))
+        valor = float(input("Digite um número: "))
 
-        soma = soma + valor
+        soma += valor
 
         if valor > maior:
             maior = valor
@@ -26,8 +30,10 @@ else:
         if valor < menor:
             menor = valor
 
-        cont = cont + 1
+        cont += 1
 
     media = (soma - maior - menor) / (n - 2)
 
-    print("A média excluindo o maior e o menor é:", media)
+    print("Maior valor:", maior)
+    print("Menor valor:", menor)
+    print("Média sem o maior e o menor:", media)

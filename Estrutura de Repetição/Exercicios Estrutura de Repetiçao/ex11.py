@@ -1,15 +1,28 @@
-n = int(input("Digite um valor para n: "))
+"""
+    Autor = Davi Federici Mendes Soares
+    Exercicios = Escreva um algoritmo que lê um valor n inteiro e positivo, e calcula e escreve o valor de S para a equação abaixo:
+    """
+#Variável n
+n = int(input("Digite um valor:"))
 
+#Fatorial
+fat = 1
+
+#Contador
 cont = 1
-fatorial = 1
-soma = 1
 
-while cont <= n:
+#Soma da série
+S = 1
 
-    fatorial = fatorial * cont
+#Estrutura de Repetição
+while n >= cont:
 
-    soma = soma + (1 / fatorial)
+    fat *= cont
 
-    cont = cont + 1
+    S += 1/fat
 
-print("O valor de S é:", soma)
+#Finalizar a estrutura
+    cont += 1
+
+#Exibir valor
+print("O resultado da equação é:", S)

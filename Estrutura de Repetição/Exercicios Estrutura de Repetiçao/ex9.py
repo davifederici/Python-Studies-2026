@@ -1,14 +1,27 @@
-n = int(input("Digite um número: "))
+"""
+    Autor = Davi Federici Mendes Soares
+    Exercicios = Elabore um programa que leia um número e imprima todos os números de 1 até o número lido, e também o seu produto.
+    Disciplina = Estrutura de repetição
+    """
 
+#Variável incial
+a = int(input("Digite um valor:"))
+
+#Fatorial
+fat = 1
+
+#Contador
 cont = 1
-produto = 1
 
-while cont <= n:
+#Estrutura de Repetição
+while a >= cont:
 
     print(cont)
 
-    produto = produto * cont
+    fat = fat * cont
 
-    cont = cont + 1
+#Finalizar a repetição
+    cont += 1
 
-print("O produto dos números é:", produto)
+#exibir
+print("Fatorial é:", fat)
