@@ -7,7 +7,7 @@ cont = a
 
 #estrutura de repetição para rodar o programa
 while cont <= b:
-    print(f"Os valoressão:", cont)
+    print(f"Os valores são:", cont)
 
 #Validando valores ímpares e multiplos de 3 na variável A
     if cont % 2 == 1:
